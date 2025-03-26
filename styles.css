@@ -1,0 +1,90 @@
+body {
+    background-color: #141024;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+  }
+  .album-section {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .album-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  .album-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+    overflow-x: auto;
+  }
+  .album-item {
+    background-color: #1e1b30;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  .img-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .icon-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .icon-group i {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+  }
+  .icon-group i:hover {
+    transform: scale(1.2);
+    color: #f1c40f;
+  }
+  .album-item:hover .img-container img {
+    transform: scale(1.1);
+  }
+  .album-item:hover .img-container .overlay {
+    opacity: 1;
+  }
+  .album-item:hover .icon-group {
+    opacity: 1;
+  }
+  .album-name {
+    font-weight: bold;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  .artist-name {
+    font-size: 12px;
+    color: #b3b3b3;
+  }
